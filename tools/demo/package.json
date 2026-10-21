@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@bvdmitri/websteady": "workspace:*",
-    "mediabunny": "1.61.3"
+    "mediabunny": "1.61.6"
   },
   "devDependencies": {
     "@types/node": "26.6.1",
