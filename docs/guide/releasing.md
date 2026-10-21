@@ -14,6 +14,10 @@ package's version and that the changelog has its section, runs every check and t
 package on npm with provenance (npm trusted publishing, no token), and creates the GitHub Release
 from the changelog section.
 
+The jobs that install and run the repository's code hold no write permission: the tarball they pack
+is staged on npm by a job that can only request the npm identity token, and the GitHub Release is
+made by a job that can only write releases. Neither runs the repository's code.
+
 4. Approve the staged version: on npmjs.com, the package's **Staged Packages** tab, or
    `npm stage list` and `npm stage approve <id>` in a terminal. Approval asks for two-factor
    authentication, which CI cannot give, so no version goes live without a maintainer.
