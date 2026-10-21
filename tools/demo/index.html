@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>websteady demo</title>
+    <style>
+      body {
+        font:
+          15px/1.5 system-ui,
+          sans-serif;
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        color: #1d2433;
+        background: #fafbfc;
+      }
+      form {
+        display: grid;
+        gap: 0.75rem;
+        grid-template-columns: max-content 1fr;
+        align-items: center;
+      }
+      button {
+        grid-column: 2;
+        justify-self: start;
+        padding: 0.4rem 1.2rem;
+      }
+      progress {
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .side {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+      }
+      video {
+        width: 100%;
+        margin-top: 1rem;
+        background: #000;
+      }
+      pre {
+        background: #eef1f5;
+        padding: 0.75rem;
+        border-radius: 6px;
+        min-height: 6em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>websteady</h1>
+    <p>
+      Stabilize a clip in this browser: the shake is measured from the pixels, smoothed, and cropped
+      away. Audio is left out.
+    </p>
+    <form id="form">
+      <label for="file">Clip</label>
+      <input id="file" name="file" type="file" accept="video/*" required />
+      <label for="smoothing">Smoothing (s)</label>
+      <select id="smoothing" name="smoothing">
+        <option value="0.5">0.5 (follows the camera)</option>
+        <option value="1" selected>1</option>
+        <option value="2">2 (steadier)</option>
+      </select>
+      <label for="crop">Crop</label>
+      <select id="crop" name="crop">
+        <option value="0.05">5%</option>
+        <option value="0.1" selected>10%</option>
+        <option value="0.2">20%</option>
+      </select>
+      <button type="submit">Stabilize</button>
+    </form>
+    <progress id="progress" value="0" max="1"></progress>
+    <pre id="status">Pick a clip.</pre>
+    <a id="download" hidden>Download the MP4</a>
+    <div class="side">
+      <video id="original" controls loop muted></video>
+      <video id="result" controls loop muted></video>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+packages:
+  - packages/*
+  - packages/adapters/*
+  - tools/*
+
+allowBuilds:
+  # esbuild's install script checks its platform binary, which Vite (the demo, the docs) runs.
+  esbuild: true

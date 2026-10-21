@@ -1,0 +1,51 @@
+{
+  "name": "@bvdmitri/websteady",
+  "version": "0.1.0",
+  "description": "Video stabilization in the browser: camera shake measured from the pixels, smoothed, and cropped away.",
+  "license": "MIT",
+  "author": "bvdmitri",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvdmitri/websteady.git",
+    "directory": "packages/websteady"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "@websteady/canvas": "workspace:*",
+    "@websteady/core": "workspace:*",
+    "tsdown": "0.23.0",
+    "vitest": "4.1.11"
+  },
+  "keywords": [
+    "video stabilization",
+    "deshake",
+    "optical flow",
+    "webcodecs",
+    "canvas"
+  ],
+  "homepage": "https://github.com/bvdmitri/websteady#readme",
+  "bugs": {
+    "url": "https://github.com/bvdmitri/websteady/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

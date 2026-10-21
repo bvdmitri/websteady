@@ -1,0 +1,26 @@
+{
+  "name": "@websteady/canvas",
+  "version": "0.0.0",
+  "private": true,
+  "description": "websteady's canvas adapter: small grey copies of frames for the analysis, and frames drawn through a correction, on OffscreenCanvas.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@websteady/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.1",
+    "vitest": "4.1.11"
+  }
+}

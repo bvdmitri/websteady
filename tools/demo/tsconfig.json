@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"],
+    "types": ["node", "vite/client"],
+    "paths": { "@bvdmitri/websteady": ["../../packages/websteady/src/index.ts"] }
+  },
+  "include": ["src/**/*.ts", "vite.config.ts"]
+}
