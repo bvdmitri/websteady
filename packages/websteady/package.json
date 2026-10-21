@@ -45,6 +45,7 @@
     "url": "https://github.com/bvdmitri/websteady/issues"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

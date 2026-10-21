@@ -1,11 +1,19 @@
 # websteady
 
+[![CI](https://github.com/bvdmitri/websteady/actions/workflows/ci.yml/badge.svg)](https://github.com/bvdmitri/websteady/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/bvdmitri/websteady/branch/main/graph/badge.svg)](https://codecov.io/gh/bvdmitri/websteady)
+[![npm](https://img.shields.io/npm/v/@bvdmitri/websteady)](https://www.npmjs.com/package/@bvdmitri/websteady)
+[![docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://bvdmitri.github.io/websteady/)
+[![license](https://img.shields.io/npm/l/@bvdmitri/websteady)](./LICENSE)
+
 Video stabilization in the browser: the camera's shake measured from the pixels, smoothed, and
 cropped away, from decoded `VideoFrame`s to decoded `VideoFrame`s.
 
 websteady is a library, not a player or a muxer: decoding, encoding, audio and playback belong to
 the application that uses it. It needs no camera metadata and no WebGPU: it works on any video, in
-a page or a worker.
+a page or a worker. It is published on npm as
+[`@bvdmitri/websteady`](https://www.npmjs.com/package/@bvdmitri/websteady), with its documentation
+at [bvdmitri.github.io/websteady](https://bvdmitri.github.io/websteady/).
 
 ## What it does
 

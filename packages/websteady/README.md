@@ -1,5 +1,9 @@
 # @bvdmitri/websteady
 
+[![npm](https://img.shields.io/npm/v/@bvdmitri/websteady)](https://www.npmjs.com/package/@bvdmitri/websteady)
+[![docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://bvdmitri.github.io/websteady/)
+[![CI](https://github.com/bvdmitri/websteady/actions/workflows/ci.yml/badge.svg)](https://github.com/bvdmitri/websteady/actions/workflows/ci.yml)
+
 Video stabilization in the browser: the camera's shake measured from the pixels, smoothed, and
 cropped away. websteady takes decoded `VideoFrame`s and gives steady ones; decoding, encoding and
 audio stay with your application.
