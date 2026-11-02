@@ -30,7 +30,7 @@
     "@types/node": "26.6.1",
     "@websteady/canvas": "workspace:*",
     "@websteady/core": "workspace:*",
-    "tsdown": "0.23.0",
+    "tsdown": "0.23.1",
     "vitest": "4.1.11"
   },
   "keywords": [
