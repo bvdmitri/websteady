@@ -28,7 +28,8 @@ operating manual for anyone (human or agent) changing the code.
 
 1. **TDD, always.** Every function starts as a failing test. Image, geometry and path maths also
    get property tests (fast-check). Coverage gates: 95% lines, 90% branches. Mutation testing
-   (Stryker) on the core breaks below 80%.
+   (Stryker) on the core breaks below 80%; it leaves out the end-to-end tests (`*.e2e.test.ts`),
+   whose pixel loops take minutes under its instrumentation.
 2. **The core is pure.** No browser API, no Node API, no npm runtime dependency in
    `packages/core`. Canvases and frames are adapters behind ports.
 3. **Every renderer has a CPU reference in the core** (`warpReference`), and what an adapter draws

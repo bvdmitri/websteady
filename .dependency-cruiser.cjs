@@ -57,7 +57,10 @@ module.exports = {
       severity: 'error',
       from: {
         orphan: true,
-        pathNot: ['\\.d\\.ts$', '(^|/)(index|main|vitest\\.config|tsdown\\.config)\\.ts$'],
+        pathNot: [
+          '\\.d\\.ts$',
+          '(^|/)(index|main|vitest(\\.mutation)?\\.config|tsdown\\.config)\\.ts$',
+        ],
       },
       to: {},
     },

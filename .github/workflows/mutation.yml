@@ -1,7 +1,8 @@
 name: Mutation tests
 
 # Stryker mutates the core and fails below 80% killed mutants. Too slow for every push, it runs
-# weekly and on demand; the incremental file carried between runs keeps each to what changed.
+# weekly and on demand; the incremental file carried between runs keeps each to what changed. It
+# runs the core's tests without the end-to-end ones (packages/core/vitest.mutation.config.ts).
 
 on:
   schedule:
