@@ -6,6 +6,14 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-02
+
+### Changed
+
+- Published with npm provenance: the package page links the commit and the workflow run that
+  built it.
+- The README links the documentation site and shows the npm version and CI status.
+
 ## [0.1.0] - 2026-10-21
 
 ### Added
@@ -20,5 +28,6 @@ All notable changes to this project are documented here. The format follows
 - `itf`: inter-frame transformation fidelity, the standard measure of a stabilization.
 - A demo page that stabilizes a picked clip and downloads the MP4.
 
-[Unreleased]: https://github.com/bvdmitri/websteady/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/bvdmitri/websteady/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/bvdmitri/websteady/releases/tag/v0.1.1
 [0.1.0]: https://github.com/bvdmitri/websteady/releases/tag/v0.1.0
